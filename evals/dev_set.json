@@ -1,0 +1,20 @@
+[
+ {"q": "Who approves invoices between INR 50,001 and INR 5,00,000?", "route": "rag", "doc": "ap_invoice_policy", "expect": "Finance Controller"},
+ {"q": "What price variance is tolerated in the three-way match?", "route": "rag", "doc": "ap_invoice_policy", "expect": "2%"},
+ {"q": "What are the standard vendor payment terms?", "route": "rag", "doc": "ap_invoice_policy", "expect": "Net 45"},
+ {"q": "What documents must a new vendor submit?", "route": "rag", "doc": "vendor_onboarding_sop", "expect": "GST certificate"},
+ {"q": "How are vendor bank details verified?", "route": "rag", "doc": "vendor_onboarding_sop", "expect": "penny-drop"},
+ {"q": "What CIBIL score is required for Personal Loan Plus?", "route": "rag", "doc": "loan_product_note", "expect": "700"},
+ {"q": "What is the processing fee for the personal loan?", "route": "rag", "doc": "loan_product_note", "expect": "1.5%"},
+ {"q": "When is prepayment allowed on the loan?", "route": "rag", "doc": "loan_product_note", "expect": "6 EMIs"},
+ {"q": "How often are high-risk customers re-verified for KYC?", "route": "rag", "doc": "kyc_refresh_guideline", "expect": "2 years"},
+ {"q": "What happens if KYC is not refreshed within 30 days of the due date?", "route": "rag", "doc": "kyc_refresh_guideline", "expect": "partial freeze"},
+ {"q": "When is the general ledger closed?", "route": "rag", "doc": "erp_month_end_close", "expect": "3rd working day"},
+ {"q": "How often is bank reconciliation done?", "route": "rag", "doc": "erp_month_end_close", "expect": "daily"},
+ {"q": "What is the status of invoice INV-1005?", "route": "tool", "tool": "get_invoice"},
+ {"q": "Show me INV-1031", "route": "tool", "tool": "get_invoice"},
+ {"q": "What are the payment terms for Kaveri Steel?", "route": "tool", "tool": "get_vendor_terms"},
+ {"q": "Is Apex Polymers an MSME vendor? What are their payment terms?", "route": "tool", "tool": "get_vendor_terms"},
+ {"q": "What is the office Wi-Fi password?", "route": "refuse"},
+ {"q": "Who won the cricket world cup?", "route": "refuse"}
+]
